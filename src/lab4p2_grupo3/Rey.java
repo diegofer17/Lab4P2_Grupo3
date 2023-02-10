@@ -11,16 +11,17 @@ package lab4p2_grupo3;
 public class Rey extends Pieza{
 
     public Rey() {
+        super();
     }
 
-    public Rey(int coordenadaXmover, int coordenadaYmover, boolean color, String representacion) {
-        super(coordenadaXmover, coordenadaYmover, color, representacion);
+    public Rey(int coordenadaXmover, int coordenadaYmover, int jugador, String representacion) {
+        super(coordenadaXmover, coordenadaYmover, jugador, representacion);
     }
     
     @Override
     public boolean movimiento(int X1, int Y1, int X2, int Y2, Object [][] tablero){
         boolean check = true;
-        if (super.movimiento(X1, Y1, X2, Y2, tablero)) {
+        if (movimiento(X1, Y1, X2, Y2, tablero)) {
             if (X2==X1+1 || Y2 == Y1 + 1) {
                 check = true;
             }

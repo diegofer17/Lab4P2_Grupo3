@@ -1,27 +1,27 @@
 package lab4p2_grupo3;
 
-public class Pieza {
+public abstract class  Pieza {
     protected int coordenadaXmover;
     protected int coordenadaYmover;
-    protected boolean color;
+    protected int jugador;
     protected String representacion;
     
     public Pieza() {
     }
 
-    public Pieza(int coordenadaXmover, int coordenadaYmover, boolean color, String representacion) {
+    public Pieza(int coordenadaXmover, int coordenadaYmover, int jugador, String representacion) {
         this.coordenadaXmover = coordenadaXmover;
         this.coordenadaYmover = coordenadaYmover;
-        this.color = color;
+        this.jugador = jugador;
         this.representacion = representacion;
     }
     
-    public boolean isColor() {
-        return color;
+    public int setJugador() {
+        return jugador;
     }
 
-    public void setColor(boolean color) {
-        this.color = color;
+    public void setJugador(int jugador) {
+        this.jugador = jugador;
     }
 
     public String getRepresentacion() {
@@ -48,16 +48,7 @@ public class Pieza {
         this.coordenadaYmover = coordenadaYmover;
     }
     
-    public boolean movimiento(int X1, int Y1, int X2, int Y2, Object [][] tablero){
-        boolean validez;
-        
-        if (X2 < 0 || X2 >8 || Y2 < 0 || Y2 > 8){
-            validez = false;
-        }else{
-            validez = true;
-        }
-        
-        return validez;
-    }
+    public abstract boolean movimiento(int X1, int Y1, int X2, int Y2, Object [][] tablero);
+    
     
 }
