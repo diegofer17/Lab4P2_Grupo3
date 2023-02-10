@@ -47,6 +47,11 @@ public abstract class  Pieza {
     public void setCoordenadaYmover(int coordenadaYmover) {
         this.coordenadaYmover = coordenadaYmover;
     }
+
+    @Override
+    public String toString() {
+        return  representacion;
+    }
     
     public abstract boolean movimiento(int X1, int Y1, int X2, int Y2, Object [][] tablero);
     
