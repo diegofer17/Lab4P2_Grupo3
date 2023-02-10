@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Lab4P2_Grupo3 {
     
     static Scanner leer = new Scanner(System.in);
-    static Object [][] tablero = new Object[8][8];
+    static Object [][] tablero = new Object[9][9];
     public static void main(String[] args) {
         
         
@@ -18,6 +18,7 @@ public class Lab4P2_Grupo3 {
         
         System.out.println("Tablero");
         System.out.println("\n");
+        llenarMatriz(tablero);
         imprimir(tablero);
     }
     
@@ -35,8 +36,8 @@ public class Lab4P2_Grupo3 {
         
         for (int i = 0; i < temporal.length; i++) {
             for (int j = 0; j < temporal[i].length; j++) {
-                if (i == 1){
-                    temporal [i][j] = new Pieza(0, 0, true, "p");
+                if (i == 2) {
+                    
                 }
             }
         }
@@ -52,7 +53,7 @@ public class Lab4P2_Grupo3 {
     }
     
     public static void imprimir(Object[][] tablero) {
-        String cadena = "";
+        /*String cadena = "";
         
         System.out.println("[ ][A][B][C][D][E][F][G][H]");
         for (int i = 0; i < tablero.length; i++) {
@@ -60,6 +61,53 @@ public class Lab4P2_Grupo3 {
                 cadena += "["+tablero[i][j]+"]" + " ";
             }
             cadena += "\n";
+        }*/
+        System.out.println("");
+        
+        for(int i = 0; i < tablero.length; i += 1) {
+            System.out.println("");
+            System.out.println("---------------------");
+            for(int j = 0; j < tablero[i].length; j += 1) {
+                System.out.print("| " + tablero[i][j] + " ");
+                if(j == tablero[i].length - 1) {
+                    System.out.print("|"+i);
+                }
+            }
         }
+        
+        System.out.println();
     }//Fin metodo imprimir
+    
+    public static Object[][] llenarMatriz(Object[][] tablero){
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                if (i == 1 && j == 0) {
+                    Peon p = new Peon(0,0,true,"p");
+                    tablero[1][0] = p;
+                }else if(i == 1 && j == 1){
+                    Peon p = new Peon(0,0,true,"p");
+                    tablero[1][1] = p;
+                }else if(i == 1 && j == 2){
+                    Peon p = new Peon(0,0,true,"p");
+                    tablero[1][2] = p;
+                }else if(i == 1 && j == 3){
+                    Peon p = new Peon(0,0,true,"p");
+                    tablero[1][3] = p;
+                }else if(i == 1 && j == 4){
+                    Peon p = new Peon(0,0,true,"p");
+                    tablero[1][4] = p;
+                }else if(i == 1 && j == 5){
+                    Peon p = new Peon(0,0,true,"p");
+                    tablero[1][5] = p;
+                }else if(i == 1 && j == 6){
+                    Peon p = new Peon(0,0,true,"p");
+                    tablero[1][6] = p;
+                }else if(i == 1 && j == 7){
+                    Peon p = new Peon(0,0,true,"p");
+                    tablero[1][7] = p;
+                }
+            }
+        }
+        return tablero;
+    }
 }
