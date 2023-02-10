@@ -1,37 +1,21 @@
 package lab4p2_grupo3;
 
 public class Pieza {
-    protected int coordenadaXpos;
-    protected int coordenadaYpos;
+    protected int coordenadaXmover;
+    protected int coordenadaYmover;
     protected boolean color;
     protected String representacion;
     
     public Pieza() {
     }
 
-    public Pieza(int coordenadaXpos, int coordenadaYpos, boolean color, String representacion) {
-        this.coordenadaXpos = coordenadaXpos;
-        this.coordenadaYpos = coordenadaYpos;
+    public Pieza(int coordenadaXmover, int coordenadaYmover, boolean color, String representacion) {
+        this.coordenadaXmover = coordenadaXmover;
+        this.coordenadaYmover = coordenadaYmover;
         this.color = color;
         this.representacion = representacion;
     }
-
-    public int getCoordenadaXpos() {
-        return coordenadaXpos;
-    }
-
-    public void setCoordenadaXpos(int coordenadaXpos) {
-        this.coordenadaXpos = coordenadaXpos;
-    }
-
-    public int getCoordenadaYpos() {
-        return coordenadaYpos;
-    }
-
-    public void setCoordenadaYpos(int coordenadaYpos) {
-        this.coordenadaYpos = coordenadaYpos;
-    }
-
+    
     public boolean isColor() {
         return color;
     }
@@ -48,19 +32,32 @@ public class Pieza {
         this.representacion = representacion;
     }
 
-    @Override
-    public String toString() {
-        return "Pieza{" + "coordenadaXpos=" + coordenadaXpos + ", coordenadaYpos=" + coordenadaYpos + ", color=" + color + ", representacion=" + representacion + '}';
+    public int getCoordenadaXmover() {
+        return coordenadaXmover;
+    }
+
+    public void setCoordenadaXmover(int coordenadaXmover) {
+        this.coordenadaXmover = coordenadaXmover;
+    }
+
+    public int getCoordenadaYmover() {
+        return coordenadaYmover;
+    }
+
+    public void setCoordenadaYmover(int coordenadaYmover) {
+        this.coordenadaYmover = coordenadaYmover;
     }
     
-    public static Object imprimir(Object[][]tablero) {
+    public boolean movimiento(int X1, int Y1, int X2, int Y2, Object [][] tablero){
+        boolean validez;
         
-        for (int i = 0; i < tablero.length; i++) {
-            for (int j = 0; j < tablero[i].length; j++) {
-                if()
-            }
-            cadena += "\n";
+        if (X2 < 0 || X2 >8 || Y2 < 0 || Y2 > 8){
+            validez = false;
+        }else{
+            validez = true;
         }
-        return cadena;
-    }//Fin metodo imprimir
+        
+        return validez;
+    }
+    
 }
