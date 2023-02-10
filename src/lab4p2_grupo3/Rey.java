@@ -17,4 +17,17 @@ public class Rey extends Pieza{
         super(coordenadaXmover, coordenadaYmover, color, representacion);
     }
     
+    @Override
+    public boolean movimiento(int X1, int Y1, int X2, int Y2, Object [][] tablero){
+        boolean check = true;
+        if (super.movimiento(X1, Y1, X2, Y2, tablero)) {
+            if (X2==X1+1 || Y2 == Y1 + 1) {
+                check = true;
+            }
+            else{
+                check = false;
+            }
+        }
+        return check;
+    }
 }
