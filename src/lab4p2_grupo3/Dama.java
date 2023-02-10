@@ -9,5 +9,12 @@ package lab4p2_grupo3;
  * @author marcela
  */
 public class Dama extends Pieza{
+
+    public Dama() {
+    }
+
+    public Dama(int coordenadaXmover, int coordenadaYmover, boolean color, String representacion) {
+        super(coordenadaXmover, coordenadaYmover, color, representacion);
+    }
     
 }

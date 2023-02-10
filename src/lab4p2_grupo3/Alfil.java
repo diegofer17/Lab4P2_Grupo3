@@ -9,5 +9,26 @@ package lab4p2_grupo3;
  * @author marcela
  */
 public class Alfil extends Pieza{
+
+    public Alfil() {
+    }
+
+    public Alfil(int coordenadaXmover, int coordenadaYmover, boolean color, String representacion) {
+        super(coordenadaXmover, coordenadaYmover, color, representacion);
+    }
     
+    
+    @Override
+    public boolean movimiento(int X1, int Y1, int X2, int Y2, Object [][] tablero){
+        boolean check = true;
+        Object tab = tablero[X2][Y2];
+        if (super.movimiento(X1, Y1, X2, Y2, tablero)) {
+            if (X1 == Y2 && Y1 == X2) {
+                check = true;
+            }else{
+                check = false;
+            }
+        }
+        return check;
+    }
 }

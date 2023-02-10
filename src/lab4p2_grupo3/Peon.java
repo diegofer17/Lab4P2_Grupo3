@@ -10,6 +10,17 @@ package lab4p2_grupo3;
  */
 public class Peon extends Pieza {
 
+    public Peon() {
+    }
+    
+    
+
+    public Peon(int coordenadaXmover, int coordenadaYmover, boolean color, String representacion) {
+        super(coordenadaXmover, coordenadaYmover, color, representacion);
+    }
+    
+    
+
     @Override
     public boolean movimiento(int X1, int Y1, int X2, int Y2, Object[][] tablero) {
         boolean check = true;
@@ -23,4 +34,7 @@ public class Peon extends Pieza {
         }
         return check;
     }
+    
+    
+    
 }
