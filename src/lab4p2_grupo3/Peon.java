@@ -23,7 +23,6 @@ public class Peon extends Pieza {
         boolean check = true;
         Object tab = tablero[X2][Y2];
         if (jugador == 1) {
-
         }
         if (X2 == X1 && Y2 != Y1 || X2 == X1 + 1) {
             check = true;

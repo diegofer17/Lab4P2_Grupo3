@@ -22,8 +22,10 @@ public class Dama extends Pieza{
     @Override
     public boolean movimiento(int X1, int Y1, int X2, int Y2, Object [][] tablero){
         boolean check = true ;
-        if (movimiento(X1, Y1, X2, Y2, tablero)) {
-            
+        if (X2 > 0 && Y2 < 8) {
+            check = true;
+        }else{
+            check = false;
         }
         
         return check;
