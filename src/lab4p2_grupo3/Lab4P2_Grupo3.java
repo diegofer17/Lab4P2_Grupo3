@@ -76,49 +76,49 @@ public class Lab4P2_Grupo3 {
 
                 Torre t2 = new Torre(0, 0, 1, "R");
                 tablero[0][7] = t2;
-            
+
                 Torre t3 = new Torre(0, 0, 2, "r");
                 tablero[7][0] = t3;
-            
+
                 Torre t4 = new Torre(0, 0, 1, "r");
                 tablero[7][7] = t4;
-           
+
                 Caballo c = new Caballo(0, 0, 1, "N");
                 tablero[0][1] = c;
-            
+
                 Caballo c1 = new Caballo(0, 0, 1, "N");
                 tablero[0][6] = c1;
-            
+
                 Caballo c2 = new Caballo(0, 0, 2, "n");
                 tablero[7][1] = c2;
-            
+
                 Caballo c3 = new Caballo(0, 0, 2, "n");
                 tablero[7][6] = c3;
-            
+
                 Alfil a = new Alfil(0, 0, 1, "B");
                 tablero[0][2] = a;
-            
+
                 Alfil a2 = new Alfil(0, 0, 1, "B");
                 tablero[0][5] = a2;
-            
+
                 Alfil a3 = new Alfil(0, 0, 2, "b");
                 tablero[7][2] = a3;
-            
+
                 Alfil a5 = new Alfil(0, 0, 2, "b");
                 tablero[7][5] = a5;
-            
+
                 Rey r = new Rey(0, 0, 1, "K");
                 tablero[0][4] = r;
-            
+
                 Rey r1 = new Rey(0, 0, 2, "k");
                 tablero[7][4] = r1;
-            
+
                 Dama r2 = new Dama(0, 0, 1, "Q");
                 tablero[0][3] = r2;
-            
+
                 Dama r3 = new Dama(0, 0, 2, "q");
                 tablero[7][3] = r3;
-                
+
                 Peon p1 = new Peon(0, 0, 1, "P");
                 tablero[2][1] = p1;
                 Peon p2 = new Peon(0, 0, 1, "P");
@@ -135,7 +135,7 @@ public class Lab4P2_Grupo3 {
                 tablero[2][7] = p7;
                 Peon p8 = new Peon(0, 0, 1, "P");
                 tablero[2][8] = p8;
-                
+
                 Peon p11 = new Peon(0, 0, 2, "p");
                 tablero[7][1] = p11;
                 Peon p22 = new Peon(0, 0, 2, "p");
@@ -152,10 +152,9 @@ public class Lab4P2_Grupo3 {
                 tablero[7][7] = p77;
                 Peon p88 = new Peon(0, 0, 2, "p");
                 tablero[7][8] = p88;
-                
+
             }
 
-            
         }
         return tablero;
     }
