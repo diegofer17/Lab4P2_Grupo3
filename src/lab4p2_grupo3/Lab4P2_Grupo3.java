@@ -25,78 +25,158 @@ public class Lab4P2_Grupo3 {
         boolean ganar = true;
 
         do {
-            int col = 0;
-            int colFinal = 0;
-            System.out.println("Ingrese la posicion de Columna de la pieza a mover: ");
-            String colLeer = leer.next();
-            switch (colLeer) {
-                case "A" -> {
-                    col = 1;
+            boolean j1 = true;
+            boolean j2 = true;
+            do {
+                System.out.println("Empieza " + jugador1);
+                int col = 0;
+                int colFinal = 0;
+                System.out.println("Ingrese la posicion de Columna de la pieza a mover: ");
+                String colLeer = leer.next();
+                switch (colLeer) {
+                    case "A" -> {
+                        col = 1;
+                    }
+                    case "B" -> {
+                        col = 2;
+                    }
+                    case "C" -> {
+                        col = 3;
+                    }
+                    case "D" -> {
+                        col = 4;
+                    }
+                    case "E" -> {
+                        col = 5;
+                    }
+                    case "F" -> {
+                        col = 6;
+                    }
+                    case "G" -> {
+                        col = 7;
+                    }
+                    case "gusabi" -> {
+                        ganar = false;
+                    }
+                    default -> {
+                        System.out.println("Ingrese una posicion valida.");
+                    }
                 }
-                case "B" -> {
-                    col = 2;
-                }
-                case "C" -> {
-                    col = 3;
-                }
-                case "D" -> {
-                    col = 4;
-                }
-                case "E" -> {
-                    col = 5;
-                }
-                case "F" -> {
-                    col = 6;
-                }
-                case "G" -> {
-                    col = 7;
-                }
-                case "gusabi" -> {
-                    ganar = false;
-                }
-                default -> {
-                    System.out.println("Ingrese una posicion valida.");
-                }
-            }
-            System.out.println("Ingrese la posicion de fila de la pieza a mover: ");
-            int fil = leer.nextInt();
-            System.out.println("Ingrese la posicion de columna donde quiere moverla: ");
-            String colLeer2 = leer.next();
-            System.out.println("Ingrese la posicion de fila donde quiere moverla: ");
-            int filFinal = leer.nextInt();
-            switch (colLeer2) {
-                case "A" -> {
-                    colFinal = 1;
-                }
-                case "B" -> {
-                    colFinal = 2;
-                }
-                case "C" -> {
-                    colFinal = 3;
-                }
-                case "D" -> {
-                    colFinal = 4;
-                }
-                case "E" -> {
-                    colFinal = 5;
-                }
-                case "F" -> {
-                    colFinal = 6;
-                }
-                case "G" -> {
-                    colFinal = 7;
-                }
-                case "gusabi" -> {
-                    ganar = false;
-                }
-                default -> {
-                    System.out.println("Ingrese una posicion valida.");
+                System.out.println("Ingrese la posicion de fila de la pieza a mover: ");
+                int fil = leer.nextInt();
+                System.out.println("Ingrese la posicion de columna donde quiere moverla: ");
+                String colLeer2 = leer.next();
+                System.out.println("Ingrese la posicion de fila donde quiere moverla: ");
+                int filFinal = leer.nextInt();
+                switch (colLeer2) {
+                    case "A" -> {
+                        colFinal = 1;
+                    }
+                    case "B" -> {
+                        colFinal = 2;
+                    }
+                    case "C" -> {
+                        colFinal = 3;
+                    }
+                    case "D" -> {
+                        colFinal = 4;
+                    }
+                    case "E" -> {
+                        colFinal = 5;
+                    }
+                    case "F" -> {
+                        colFinal = 6;
+                    }
+                    case "G" -> {
+                        colFinal = 7;
+                    }
+                    case "gusabi" -> {
+                        ganar = false;
+                    }
+                    default -> {
+                        System.out.println("Ingrese una posicion valida.");
+                    }
+
                 }
 
-            }
+                mover(tablero, col, fil, colFinal, filFinal);
+                imprimir(creartablero(9, 9));
+            } while (j1);
+            do {
+                System.out.println("Empieza " + jugador2);
+                int col = 0;
+                int colFinal = 0;
+                System.out.println("Ingrese la posicion de Columna de la pieza a mover: ");
+                String colLeer = leer.next();
+                switch (colLeer) {
+                    case "A" -> {
+                        col = 1;
+                    }
+                    case "B" -> {
+                        col = 2;
+                    }
+                    case "C" -> {
+                        col = 3;
+                    }
+                    case "D" -> {
+                        col = 4;
+                    }
+                    case "E" -> {
+                        col = 5;
+                    }
+                    case "F" -> {
+                        col = 6;
+                    }
+                    case "G" -> {
+                        col = 7;
+                    }
+                    case "gusabi" -> {
+                        ganar = false;
+                    }
+                    default -> {
+                        System.out.println("Ingrese una posicion valida.");
+                    }
+                }
+                System.out.println("Ingrese la posicion de fila de la pieza a mover: ");
+                int fil = leer.nextInt();
+                System.out.println("Ingrese la posicion de columna donde quiere moverla: ");
+                String colLeer2 = leer.next();
+                System.out.println("Ingrese la posicion de fila donde quiere moverla: ");
+                int filFinal = leer.nextInt();
+                switch (colLeer2) {
+                    case "A" -> {
+                        colFinal = 1;
+                    }
+                    case "B" -> {
+                        colFinal = 2;
+                    }
+                    case "C" -> {
+                        colFinal = 3;
+                    }
+                    case "D" -> {
+                        colFinal = 4;
+                    }
+                    case "E" -> {
+                        colFinal = 5;
+                    }
+                    case "F" -> {
+                        colFinal = 6;
+                    }
+                    case "G" -> {
+                        colFinal = 7;
+                    }
+                    case "gusabi" -> {
+                        ganar = false;
+                    }
+                    default -> {
+                        System.out.println("Ingrese una posicion valida.");
+                    }
 
-            mover(tablero, col, fil, colFinal, filFinal);
-            imprimir(creartablero(9, 9));
+                }
+
+                mover(tablero, col, fil, colFinal, filFinal);
+                imprimir(creartablero(9, 9));
+            } while (j2);
 
         } while (ganar);
     }
@@ -298,7 +378,7 @@ public class Lab4P2_Grupo3 {
             }
         } else if (tablero[col][fil] instanceof Caballo) {
             if (((Caballo) temp).movimiento(fil, col, filFinal, colFinal, tablero)) {
-               
+
                 if (((Peon) temp).movimiento(fil, col, filFinal, colFinal, tablero)) {
                     if (aux instanceof Peon) {
                         int t = ((Peon) aux).getJugador();
