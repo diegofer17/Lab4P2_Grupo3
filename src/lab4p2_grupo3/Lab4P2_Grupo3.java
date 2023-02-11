@@ -101,6 +101,9 @@ public class Lab4P2_Grupo3 {
 
                 mover(tablero, col, fil, colFinal, filFinal);
                 imprimir(creartablero(9, 9));
+                
+                j1 = false;
+                j2 =true;
             } while (j1);
             do {
                 System.out.println("Empieza " + jugador2);
@@ -176,8 +179,10 @@ public class Lab4P2_Grupo3 {
 
                 mover(tablero, col, fil, colFinal, filFinal);
                 imprimir(creartablero(9, 9));
+                j2 = false;
+                j1 = true;
             } while (j2);
-
+            
         } while (ganar);
     }
 
