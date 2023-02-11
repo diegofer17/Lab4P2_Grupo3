@@ -16,7 +16,7 @@ public abstract class  Pieza {
         this.representacion = representacion;
     }
     
-    public int setJugador() {
+    public int getJugador() {
         return jugador;
     }
 
